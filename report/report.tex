@@ -93,31 +93,32 @@ other section covers the images that was produced.
 \label{sec:comp-results}
 
 A comparision of effecitenty of the number of processors used is shown
-in Table \ref{tab:1} for the blur filter, and Table \ref {tab:2} for
+in Table \ref{tab:1} for the blur filter (with a radius of 50), and Table \ref {tab:2} for
 the threshold filter. The problem size, i.e. the number of pixels used,
 is denoted by $n$, and the number of processors used is denoted by $p$.
 
+
 \begin{table}[h]
   \centering
-  \begin{tabular}[h]{c|c|c|c}
-    \backslashbox{$p$}{$n$} & 515788 & & \\
+  \begin{tabular}[]{c|c|c|c}
+    \backslashbox{$p$}{$n$} & 515788 & 1048576 & 9000000 \\
     \hline 
-    1 & 1.68212 & & \\
-    2 &   0.933425  & &    \\
-    4 & 1.1206 & & 
+    1 & 2.51599  & 4.69139  & 40.1536 \\
+    2 & 1.36332  & 2.5482  & 20.7491 \\
+    4 & 0.850465  & 1.59503 & 12.8175 
   \end{tabular}
-  \caption{Elapsed time when diferrent number of processors was used.}
+  \caption{Elapsed time when differrent number of processors was used.}
   \label{tab:1}
 \end{table}
 
 \begin{table}[h]
   \centering
   \begin{tabular}[h]{c|c|c|c}
-    \backslashbox{$p$}{$n$} & 515788 & & \\
+    \backslashbox{$p$}{$n$} & 515788 & 1048576 & 9000000\\
     \hline 
-    1 & 0.020514  & & \\
-    2 &   0.933425  & &    \\
-    4 & 1.1206 & & 
+    1 & 0.0421069 & 0.0667911 & 0.431706   \\
+    2 & 0.0100501  & 0.0175579 & 0.282922   \\
+    4 & 0.00811195 & 0.0438762 & 0.105303
   \end{tabular}
   \caption{Elapsed time when diferrent number of processors was used
     for the threshold filter}
@@ -160,12 +161,12 @@ The result of using \texttt{im1.png} is shown in Figure
 \label{sec:code}
 
 \lstinputlisting[caption=blurmain.c, style=ccode]
-{/home/anton/Documents/tddc78/lab1Filters/blurmain.c}
+{../blurmain.c}
 
 \clearpage
 
 \lstinputlisting[caption=thresmain.c, 
-style=ccode]{/home/anton/Documents/tddc78/lab1Filters/thresmain.c}
+style=ccode]{../thresmain.c}
 
 
 
