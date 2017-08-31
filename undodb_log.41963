@@ -1,0 +1,482 @@
+ 77,430.663  client/client.c:1404:client_bfm_owner [41963:41963]: assertion failure (ignored):
+ 77,430.663  client/client.c:1404:client_bfm_owner [41963:41963]: error_terminating() || r == 0
+ 77,430.663  client/client.c:1404:client_bfm_owner [41963:41963]: error reading BFM owner on pid 41893 (exists), rchild_pid=41893: -3: ESRCH (No such process)
+ 77,430.663  client/client.c:1404:client_bfm_owner [41963:41963]: assertion failure (ignored):
+ 77,430.663  client/client.c:1404:client_bfm_owner [41963:41963]: error_terminating() || r == 0
+ 77,430.663  client/client.c:1404:client_bfm_owner [41963:41963]: error reading BFM owner on pid 41893 (exists), rchild_pid=41893: -3: ESRCH (No such process)
+ 77,430.663  client/client.c:1448:child_regs [41963:41963]: assertion failure (ignored):
+ 77,430.663  client/client.c:1448:child_regs [41963:41963]: e==0
+ 77,430.663  client/client.c:1448:child_regs [41963:41963]: unexpected ptrace error, request=PTRACE_GETREGS, pid=41893 (exists) (rchild()->pid=41893, in_record()=1): -3: ESRCH (No such process)
+ 77,430.663  client/client.c:5035:ensure_child_pc_b [41963:41963]: assertion failure (ignored):
+ 77,430.663  client/client.c:5035:ensure_child_pc_b [41963:41963]: 0
+ 77,430.663  client/client.c:5035:ensure_child_pc_b [41963:41963]: error -3 getting child regs
+ 77,430.663  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: assertion failure (ignored):
+ 77,430.663  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: 0
+ 77,430.663  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: error -3 reading [0x00000040209ebca8,856) from 41893
+ num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 77,430.663  client/client.c:11777:getregs4 [41963:41963]: assertion failure (ignored):
+ 77,430.663  client/client.c:11777:getregs4 [41963:41963]: 0
+ 77,430.663  client/client.c:11777:getregs4 [41963:41963]: no registers for tid 41893 c=0x0000004020b0d050 r_child()=0x0000004020b0d050 c->pid=41893 sharedstate->load=0 rchild_tid=41893 rchild_pid=41893 s_load_rchild_pid=0 in_record()=1
+ 77,430.673  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: assertion failure (ignored):
+ 77,430.673  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: 0
+ 77,430.673  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: error -3 reading [0x00000040209ebca8,856) from 41893
+ num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 77,430.673  client/client.c:11777:getregs4 [41963:41963]: assertion failure (ignored):
+ 77,430.673  client/client.c:11777:getregs4 [41963:41963]: 0
+ 77,430.673  client/client.c:11777:getregs4 [41963:41963]: no registers for tid 41893 c=0x0000004020b0d050 r_child()=0x0000004020b0d050 c->pid=41893 sharedstate->load=0 rchild_tid=41893 rchild_pid=41893 s_load_rchild_pid=0 in_record()=1
+ 77,430.693  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: assertion failure (ignored):
+ 77,430.693  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: 0
+ 77,430.693  client/client.c:11487:find_child_thread_by_tid_or_num [41963:41963]: error -3 reading [0x00000040209ebca8,856) from 41893
+ num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 77,430.694  util/error.c:156:error_vassertf [41963:41963]: ignoring future asserts with asserts not active. num_ignored=10
+ num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+   0  f S  41967                    0                    0 0x00000000412afb94 2:0xffffffffffffffff                    0
+   1  f    42266               720896               720896 0x00000000412afb94 2:0xffffffffffffffff               655803
+   2  f    42268               786432               786432 0x00000000412afb94 2:0xffffffffffffffff               655803
+   3  f    42274               851968               851968 0x00000000412afb94 2:0xffffffffffffffff               655803
+   4  f    42277               917504               917504 0x00000000412afb94 2:0xffffffffffffffff               655803
+   5  f    42279               983040               983040 0x00000000412afb94 2:0xffffffffffffffff               655803
+   6  f    42281              1048576              1048576 0x00000000412afb94 2:0xffffffffffffffff               655803
+   7  f    42283              1114112              1114112 0x00000000412afb94 2:0xffffffffffffffff               655803
+   8  f    42285              1179648              1179648 0x00000000412afb94 2:0xffffffffffffffff               655803
+   9  f    42288              1245184              1245184 0x00000000412afb94 2:0xffffffffffffffff               655803
+  10  f    42290              1310720              1310720 0x00000000412afb94 2:0xffffffffffffffff               655803
+  11  f    42292              1376256              1376256 0x00000000412afb94 2:0xffffffffffffffff               655803
+  12  f    42294              1441792              1441792 0x00000000412afb94 2:0xffffffffffffffff               655803
+  13  f    42296              1507328              1507328 0x00000000412afb94 2:0xffffffffffffffff               655803
+  14  f    42298              1572864              1572864 0x00000000412afb94 2:0xffffffffffffffff               655803
+  15  f    42300              1638400              1638400 0x00000000412afb94 2:0xffffffffffffffff               655803
+  16  f    42302              1703936              1703936 0x00000000412afb94 2:0xffffffffffffffff               655803
+  17  f    42305              1835008              1835008 0x00000000412afb94 2:0xffffffffffffffff               655803
+  18  f    42309              2097152              2097152 0x00000000412afb94 2:0xffffffffffffffff               655803
+  19  f    42312              2621440              2621440 0x00000000412afb94 2:0xffffffffffffffff               655803
+  20  f    42315              3145728              3145728 0x00000000412afb94 2:0xffffffffffffffff               655803
+  21  f    42317              4194304              4194304 0x00000000412afb94 2:0xffffffffffffffff               655803
+  22  f    42319              6291456              6291456 0x00000000412afb94 2:0xffffffffffffffff               655803
+  23  f    42321              8388608              8388608 0x00000000412afb94 2:0xffffffffffffffff               655803
+  24  f    42323             12582912             12582912 0x00000000412afb94 2:0xffffffffffffffff               655803
+  25  f    42330             16777216             16777216 0x00000000412afb94 2:0xffffffffffffffff               655803
+  26  f    42337             25165824             25165824 0x00000000412afb94 2:0xffffffffffffffff               655803
+  27  f    42339             33554432             33554432 0x00000000412afb94 2:0xffffffffffffffff               655803
+  28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+client_pid=41963 rchild_aux_tid=41965 bbcount_delta=0 77,441.412  util/net.c:523:net_ewrite_int32 [41963:41963]: fatal error:
+ 77,441.412  util/net.c:523:net_ewrite_int32 [41963:41963]: write_int32 failed: -32: EPIPE (Broken pipe)
+ 77,441.412  client/client.c:7890:handle_error [41963:41963]: fatal=1 sharedstate->client_pid=41963
+ 77,441.412  client/client.c:7936:handle_error [41963:41963]: sharedstate->client_pid=41963 exists
+ 77,441.412  client/client.c:7725:handle_error_print_diags [41963:41963]: UndoDB is aborting...
+ 77,441.512  client/client.c:7743:handle_error_print_diags [41963:41963]: my backtrace is:
+        pc=0x000000004129cc3e loc=/home/gregjules/phenom/home/gel/working/undodb-clean/undo/undodb/util/error.c:104:error_terminate
+        frame  0: frame=0x000000000000020b pc=0x000000004129cc3d /home/gregjules/phenom/home/gel/working/undodb-clean/undo/undodb/util/error.c:93:error_terminate
+
+
+ 77,441.512  client/client.c:7762:handle_error_print_diags [41963:41963]: Fatal error - client termination
+undodb: 0 shared maps
+undodb: last 10 messages are:
+undodb: 387: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x00000040214b1700, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af780473004=SEGV_ACCERR si_code==2
+undodb: 388: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x00000040214b1f1b, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af780473004=SEGV_ACCERR si_code==2
+undodb: 389: bbcount=34871485, id=41893, type=0 (msg_NONE), pc=0x00000040214b220c, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af780473000=SEGV_ACCERR si_code==2
+undodb: 390: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x00000040214b32d4, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af780473040=SEGV_ACCERR si_code==2
+undodb: 391: bbcount=34871493, id=41893, type=0 (msg_NONE), pc=0x00000040214b3637, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af7804730c0=SEGV_ACCERR si_code==2
+undodb: 392: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x00000040214b404f, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af7804732c0=SEGV_ACCERR si_code==2
+undodb: 393: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x00000040214b478b, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af7804730c0=SEGV_ACCERR si_code==2
+undodb: 394: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x00000040214b5360, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af780473040=SEGV_ACCERR si_code==2
+undodb: 395: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x00000040214b6319, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0x00002af77f2ca0b8=SEGV_ACCERR si_code==2
+undodb: 396: bbcount=34881536, id=41893, type=0 (msg_NONE), pc=0x0000004021258040, pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV), si=si_signo=11=11 (SIGSEGV) si_errno=0  si_addr=0xffffffff8bfffffd=SEGV_MAPERR si_code==1
+ 77,441.512  client/client.c:7785:handle_error_print_diags [41963:41963]: child()->bbcount=34872192
+ 77,441.513  shared/event.c:346:event_print_range [41963:41963]: events from 34871841 to 18446744073709551615 (inclusive):
+ 77,441.513  shared/event.c:325:event_print [41963:41963]: 0x0000004022818658 size=72 bbcount=34871845 pc_a=1:0x00002af77e423d33 code=-14 (event_SHMEM_FIXUP) has_snapshot=0 is_map_change_event=0 addr=0x00002af7804731c0, sz=4
+ 77,441.513  shared/event.c:325:event_print [41963:41963]: 0x00000040228186a0 size=72 bbcount=34871853 pc_a=1:0x00002af77e423d33 code=-14 (event_SHMEM_FIXUP) has_snapshot=0 is_map_change_event=0 addr=0x00002af780473200, sz=4
+ 77,441.513  shared/event.c:325:event_print [41963:41963]: 0x00000040228186e8 size=72 bbcount=34871861 pc_a=1:0x00002af77e423d33 code=-14 (event_SHMEM_FIXUP) has_snapshot=0 is_map_change_event=0 addr=0x00002af780473240, sz=4
+ 77,441.513  shared/event.c:325:event_print [41963:41963]: 0x0000004022818730 size=72 bbcount=34871869 pc_a=1:0x00002af77e423d33 code=-14 (event_SHMEM_FIXUP) has_snapshot=0 is_map_change_event=0 addr=0x00002af780473280, sz=4
+ 77,441.513  shared/event.c:325:event_print [41963:41963]: 0x0000004022818778 size=192 bbcount=34872192 pc_a=1:0x00002af77efae8cc code=-10 (event_STATUS_TODEBUGGER) has_snapshot=0 is_map_change_event=0 status=pid=41893 WIFSTOPPED status=0xb7f sig=11 (SIGSEGV)
+ 77,441.513  shared/event.c:325:event_print [41963:41963]: 0x00000040209f23b0 size=7234249087520944685 bbcount=8606977229197424689 pc_a=48:0x303a383020303030 code=-7 (event_SENTINEL) has_snapshot=49 is_map_change_event=48 map_change_event-filename=
+ 77,441.513  client/client.c:7788:handle_error_print_diags [41963:41963]: threads are:
+ 77,441.513  client/client.c:2228:show_threads [41963:41963]: 
+
+ 77,441.513  client/client.c:2231:show_threads [41963:41963]: child()->bbcount=34872192 (r_child()->bbcount=34872192), bfm_owner=0
+
+ 77,441.513  client/client.c:2232:show_threads [41963:41963]: threads are:
+ 77,441.513  client/client.c:2239:show_threads [41963:41963]: ------------------------------------------------
+
+ 77,441.513  client/client.c:2240:show_threads [41963:41963]: tid=41893
+
+ 77,441.513  client/client.c:2245:show_threads [41963:41963]: No regs for tid 41893 (e=-3=-3: ESRCH (No such process))
+ 77,441.513  client/client.c:2263:show_threads [41963:41963]: ------------------------------------------------
+
+ 77,441.513  client/client.c:7790:handle_error_print_diags [41963:41963]: children are:
+undodb:  num cfpSs   pid              bbcount        bbcount-delta                  B                    A           ev.bbcount
+undodb:    0  f S  41967                    0                    0 0x0000000000000000 2:0xffffffffffffffff                    0
+undodb:    1  f    42266               720896               720896 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    2  f    42268               786432               786432 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    3  f    42274               851968               851968 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    4  f    42277               917504               917504 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    5  f    42279               983040               983040 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    6  f    42281              1048576              1048576 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    7  f    42283              1114112              1114112 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    8  f    42285              1179648              1179648 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:    9  f    42288              1245184              1245184 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   10  f    42290              1310720              1310720 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   11  f    42292              1376256              1376256 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   12  f    42294              1441792              1441792 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   13  f    42296              1507328              1507328 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   14  f    42298              1572864              1572864 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   15  f    42300              1638400              1638400 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   16  f    42302              1703936              1703936 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   17  f    42305              1835008              1835008 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   18  f    42309              2097152              2097152 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   19  f    42312              2621440              2621440 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   20  f    42315              3145728              3145728 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   21  f    42317              4194304              4194304 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   22  f    42319              6291456              6291456 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   23  f    42321              8388608              8388608 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   24  f    42323             12582912             12582912 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   25  f    42330             16777216             16777216 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   26  f    42337             25165824             25165824 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   27  f    42339             33554432             33554432 0x0000000000000000 2:0xffffffffffffffff               655803
+undodb:   28 c p   41893             34872192             34872192 0x0000000000000000 0:0x00002af77efae8cc             34872192
+undodb: c=current_child f=frozen p=dont_prune S=syscall_snapshot s=stopped-in-syscall
+undodb: client_pid=41963 rchild_aux_tid=0 bbcount_delta=0
+ 77,441.513  client/client.c:7794:handle_error_print_diags [41963:41963]: sharedstate->client_pid=41963, rchild=41893, rchild_aux_tid=0, volatile=0
+ 77,441.513  client/client.c:7795:handle_error_print_diags [41963:41963]: sharedstate=0x00000040209eec24 /proc/self/maps is:
+00400000-00408000 r-xp 00000000 00:20 59258163                           /home/x_antka/Documents/tddc78/tddc78lab1/blurmpi
+00607000-00608000 rw-p 00007000 00:20 59258163                           /home/x_antka/Documents/tddc78/tddc78lab1/blurmpi
+0250b000-0252c000 rw-p 00000000 00:00 0                                  [heap]
+41296000-413cf000 rwxp 00000000 fd:00 6422539                            /tmp/replay_x_antka_n43/replay_session_9HT59o/undodb_a.0x41296000.bin
+413cf000-413d9000 rwxp 00000000 00:00 0 
+40209e6000-40209e7000 ---p 00000000 00:00 0 
+40209e7000-40209ec000 rw-p 00000000 00:00 0 
+40209ec000-40209ed000 ---p 00000000 00:00 0 
+40209ed000-40211ed000 rw-s 00000000 00:04 10787819                       /dev/zero (deleted)
+40211ed000-40211ee000 ---p 00000000 00:00 0 
+40211ee000-40221ee000 rwxs 00000000 00:04 10787820                       /dev/zero (deleted)
+40221ee000-40221ef000 ---p 00000000 00:00 0 
+40221ef000-402222f000 rwxp 00000000 00:00 0 
+402222f000-4022230000 ---p 00000000 00:00 0 
+4022230000-4022630000 rwxp 00000000 00:00 0 
+4022630000-4022631000 ---p 00000000 00:00 0 
+4022631000-4022651000 rw-p 00000000 00:00 0 
+4022651000-4022652000 ---p 00000000 00:00 0 
+4022652000-4026652000 rw-s 00000000 00:04 10787821                       /dev/zero (deleted)
+2af77d84f000-2af77d86f000 r-xp 00000000 08:01 5721                       /lib64/ld-2.12.so
+2af77d86f000-2af77d870000 rw-p 00000000 00:00 0 
+2af77d87f000-2af77d880000 rw-p 00000000 00:00 0 
+2af77da6f000-2af77da70000 r--p 00020000 08:01 5721                       /lib64/ld-2.12.so
+2af77da70000-2af77da71000 rw-p 00021000 08:01 5721                       /lib64/ld-2.12.so
+2af77da71000-2af77da72000 rw-p 00000000 00:00 0 
+2af77da72000-2af77da79000 r-xp 00000000 08:01 5698                       /lib64/librt-2.12.so
+2af77da79000-2af77dc78000 ---p 00007000 08:01 5698                       /lib64/librt-2.12.so
+2af77dc78000-2af77dc79000 r--p 00006000 08:01 5698                       /lib64/librt-2.12.so
+2af77dc79000-2af77dc7a000 rw-p 00007000 08:01 5698                       /lib64/librt-2.12.so
+2af77dc7a000-2af77dcfd000 r-xp 00000000 08:01 5934                       /lib64/libm-2.12.so
+2af77dcfd000-2af77defc000 ---p 00083000 08:01 5934                       /lib64/libm-2.12.so
+2af77defc000-2af77defd000 r--p 00082000 08:01 5934                       /lib64/libm-2.12.so
+2af77defd000-2af77defe000 rw-p 00083000 08:01 5934                       /lib64/libm-2.12.so
+2af77defe000-2af77df83000 r-xp 00000000 00:22 7263597                    /software/apps/intel/impi/5.0.2.044/intel64/lib/libmpifort.so.12.0
+2af77df83000-2af77e182000 ---p 00085000 00:22 7263597                    /software/apps/intel/impi/5.0.2.044/intel64/lib/libmpifort.so.12.0
+2af77e182000-2af77e186000 rw-p 00084000 00:22 7263597                    /software/apps/intel/impi/5.0.2.044/intel64/lib/libmpifort.so.12.0
+2af77e186000-2af77e187000 rw-p 00000000 00:00 0 
+2af77e187000-2af77e675000 r-xp 00000000 00:22 7263614                    /software/apps/intel/impi/5.0.2.044/intel64/lib/release_mt/libmpi.so.12.0
+2af77e675000-2af77e875000 ---p 004ee000 00:22 7263614                    /software/apps/intel/impi/5.0.2.044/intel64/lib/release_mt/libmpi.so.12.0
+2af77e875000-2af77e8a8000 rw-p 004ee000 00:22 7263614                    /software/apps/intel/impi/5.0.2.044/intel64/lib/release_mt/libmpi.so.12.0
+2af77e8a8000-2af77e8fb000 rw-p 00000000 00:00 0 
+2af77e8fb000-2af77e8fd000 r-xp 00000000 08:01 6070                       /lib64/libdl-2.12.so
+2af77e8fd000-2af77eafd000 ---p 00002000 08:01 6070                       /lib64/libdl-2.12.so
+2af77eafd000-2af77eafe000 r--p 00002000 08:01 6070                       /lib64/libdl-2.12.so
+2af77eafe000-2af77eaff000 rw-p 00003000 08:01 6070                       /lib64/libdl-2.12.so
+2af77eaff000-2af77eb16000 r-xp 00000000 08:01 5728                       /lib64/libpthread-2.12.so
+2af77eb16000-2af77ed16000 ---p 00017000 08:01 5728                       /lib64/libpthread-2.12.so
+2af77ed16000-2af77ed17000 r--p 00017000 08:01 5728                       /lib64/libpthread-2.12.so
+2af77ed17000-2af77ed18000 rw-p 00018000 08:01 5728                       /lib64/libpthread-2.12.so
+2af77ed18000-2af77ed1c000 rw-p 00000000 00:00 0 
+2af77ed1c000-2af77ed32000 r-xp 00000000 08:01 5977                       /lib64/libgcc_s-4.4.7-20120601.so.1
+2af77ed32000-2af77ef31000 ---p 00016000 08:01 5977                       /lib64/libgcc_s-4.4.7-20120601.so.1
+2af77ef31000-2af77ef32000 rw-p 00015000 08:01 5977                       /lib64/libgcc_s-4.4.7-20120601.so.1
+2af77ef32000-2af77ef33000 rw-p 00000000 00:00 0 
+2af77ef33000-2af77f0bd000 r-xp 00000000 08:01 6047                       /lib64/libc-2.12.so
+2af77f0bd000-2af77f2bd000 ---p 0018a000 08:01 6047                       /lib64/libc-2.12.so
+2af77f2bd000-2af77f2c1000 r--p 0018a000 08:01 6047                       /lib64/libc-2.12.so
+2af77f2c1000-2af77f2c3000 rw-p 0018e000 08:01 6047                       /lib64/libc-2.12.so
+2af77f2c3000-2af77f2ca000 rw-p 00000000 00:00 0 
+7ffed441c000-7ffed4533000 rw-p 00000000 00:00 0                          [stack]
+7ffed4593000-7ffed4594000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+ 77,441.519  client/client.c:7797:handle_error_print_diags [41963:41963]: rchild_pid=41893 /proc/41893/maps is:
+ 77,441.519  client/client.c:7810:handle_error_print_diags [41963:41963]: calling debug_dump_internal_log()
+ 77,441.519  client/client.c:7707:internal_log_filename [41963:41963]: dumping internal log to 'undodb_log.41963'
