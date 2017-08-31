@@ -104,7 +104,7 @@ int main (int argc, char ** argv) {
     }
   
   //MPI_Bcast(&chunkSize, 1, MPI_INT, root, MPI_COMM_WORLD);
-   
+
   MPI_Bcast(&xsize, 1, MPI_INT, root, MPI_COMM_WORLD);
   MPI_Bcast(&ysize, 1, MPI_INT, root, MPI_COMM_WORLD);
   MPI_Bcast(&radius, 1, MPI_INT, root, MPI_COMM_WORLD);
@@ -130,13 +130,9 @@ int main (int argc, char ** argv) {
   yfrom = 0;
   yto = scounts[rank]/xsize;
   
-  /* fprintf(stderr, "Process %d is calling filter\n", rank); */
-  /* clock_gettime(CLOCK_REALTIME, &stime); */
-  blurfilter(xsize, yfrom, yto, localsrc, radius, w);   
-  /* clock_gettime(CLOCK_REALTIME, &etime); */
 
-  /* printf("Filtering took: %g secs for processs %d\n", (etime.tv_sec  - stime.tv_sec) + */
-  /* 	 1e-9*(etime.tv_nsec  - stime.tv_nsec), rank) ; */
+  blurfilter(xsize, yfrom, yto, localsrc, radius, w);   
+
 
   //Return result from slaves to master
 
@@ -168,9 +164,10 @@ int main (int argc, char ** argv) {
 	   endtime-starttime, np, xsize*ysize);
   }
 
-  //Free the MPI_Data_types created.
-  free(mpi_pixel);
-  mpi_pixel = NULL;
+  //Free the
+  //MPI_Data_types created.  if (rank == 0)
+  MPI_Type_free(&mpi_pixel);
+  //mpi_pixel = NULL;
 
   //Free pointers
   free(src);

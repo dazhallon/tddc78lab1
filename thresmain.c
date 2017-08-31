@@ -151,8 +151,11 @@ int main (int argc, char ** argv) {
   }
   
   //free pointers
-  free(src);
-  src = NULL;
+
+  if (rank == 0){
+    free(src);
+    src = NULL;
+  }
   
   MPI_Finalize();
 

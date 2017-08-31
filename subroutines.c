@@ -3,8 +3,8 @@
 
 int sumArray(const int* array, const int np)
 {
-  int sum = 0;
-  for (int i = 0; i < np; ++i)
+  int sum = 0, i;
+  for (i = 0; i < np; ++i)
     {
       sum += array[i];
     }
@@ -12,15 +12,15 @@ int sumArray(const int* array, const int np)
 }
 
 void chopup(const int np, const int xsize, const int ysize, const int radius,
- 	     int* scounts, int* displs,
+ 	     int scounts[np], int* displs,
 	     int* filtercounts, int* sendbackdispls)
  {
-   int chunkSize, numrow;
+   int chunkSize, numrow, i;
    numrow = ceil(ysize/(double)np);
    chunkSize = xsize*numrow;
    
    //Handle middle sections
-   for (int i = 1; i < np-1; ++i)
+   for (i = 1; i < np-1; ++i)
      {
        scounts[i] = chunkSize + 2*radius*xsize;  
        displs[i] = chunkSize*i - radius*xsize;
@@ -30,7 +30,11 @@ void chopup(const int np, const int xsize, const int ysize, const int radius,
 
    //Handle special cases 
    {
-     scounts[0] = chunkSize + radius*xsize;
+     if (np  == 1)
+       scounts[0] = chunkSize;
+     else
+       scounts[0] = chunkSize + radius*xsize;
+
      displs[0] = 0;
 
      filtercounts[0] = chunkSize;
