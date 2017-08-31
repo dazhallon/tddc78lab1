@@ -1,0 +1,6 @@
+/*Here are som e function that are used in the lab and are moved here
+to avoid that the code looks crowded.
+*/
+
+int sumArray(int* array)
+  
